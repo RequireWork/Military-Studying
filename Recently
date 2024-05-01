@@ -1,0 +1,66 @@
+//Extremely simple code about the weight change when going to a different planet
+
+#include <iostream>
+
+int main() {
+  // Add your code below  
+  double marsw;
+  double earthw;
+  std::cout << "What is the weight of the object on Earth: ";
+  std::cin >> earthw;
+  marsw = earthw * 0.8;
+  std::cout << "The current weight of stuff that was on Earth now on mars is " << marsw << "kg.";
+}
+
+//First Time Using a Switch
+#include <iostream>
+
+int main() {
+  int LMw;
+  int PNum;
+
+  std::cout << "What is your Earth weight: ";
+  std::cin >> LMw;
+  std::cout << "What planet does he want to fight on: ";
+  std::cin >> PNum;
+  switch (PNum) {
+    case 1:
+      std::cout << "On Mercury your weight is: " << LMw * 0.38;
+      break;
+    case 2:
+      std::cout << "On Venus your weight is: " << LMw * 0.91;
+      break;
+    case 3:
+      std::cout << "On Mars your weight is: " << LMw * 0.91;
+      break;
+    default:
+      std::cout << "None has fit the Criteria";
+      break;
+  }
+  std::cout << "\n";
+}
+
+//Using Logical Operators
+#include <iostream>
+
+int main() {
+  int year;
+  std::cout << "Can You Give Us A Year As An Input: ";
+  std::cin >> year;
+  if(year % 1000 != 0)
+  {
+    if(year % 4 == 0)
+    {
+      if(year % 100 == 0 && year % 400 != 0)
+      {
+        std::cout << "Not a Leap Year";
+      }
+      else
+      {
+        std::cout << "Is Definitely a leap year";
+      }
+    }
+  }
+  std::cout << "Not a Leap Year";
+  std::cout << "\n";
+}
