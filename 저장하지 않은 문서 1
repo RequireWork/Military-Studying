@@ -1,0 +1,128 @@
+//Making a function about water planting
+#include <iostream>
+
+// Define needs_water() here
+std::string needs_water(int days, bool is_succulent)
+{
+  std::string ret = "";
+  if(is_succulent == false && days > 3)
+  {
+    ret = "Time to water the plant.";
+  }
+  else if(is_succulent == true && days <= 12)
+  {
+    ret = "Don't water the plant!";
+  }
+  else if(is_succulent == true && days >= 13)
+  {
+    ret = "Go ahead and give the plant a little water.";
+  }
+  else
+  {
+    ret = "Don't water the plant!";
+  }
+  return ret;
+}
+
+int main() {
+  
+  std::cout << needs_water(10, false) << "\n";
+  
+}
+
+
+
+//Creating a Palindrome yes or no boolean function
+#include <iostream>
+
+// Define is_palindrome() here:
+bool is_palindrome(std::string text)
+{
+  std::string rev_text = "";
+  for (int i = text.size() - 1; i >= 0; i--)
+  {
+    rev_text += text[i];
+  }
+  if(rev_text == text)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+}
+
+int main() {
+  
+  std::cout << is_palindrome("madam") << "\n";
+  std::cout << is_palindrome("ada") << "\n";
+  std::cout << is_palindrome("lovelace") << "\n";
+  
+}
+
+//Making A Quadratic Formula 
+#include <iostream>
+#include <cmath>
+
+int main() {
+  double a,b,c;
+  //Input a Number for A
+  std::cout << "Enter a: ";
+  std::cin >> a;
+  //Input a Number for B
+  std::cout << "Enter b: ";
+  std::cin >> b;
+  //Input a Number for C
+  std::cout << "Enter c: ";
+  std::cin >> c;
+
+  double root1,root2;
+  root1 = (-b + sqrt(pow(b,2) - (4 * a * c))) / (2 * a);
+  root2 = (-b - sqrt(pow(b,2) - (4 * a * c))) / (2 * a);
+
+  std::cout << "Root 1 is " << root1 << "\n";
+  std::cout << "Root 2 is " << root2 << "\n";
+}
+
+//Dog Years 
+#include <iostream>
+
+int main() {
+  //Current Dogs Age
+  int dog_age = 6;
+
+  int early_years;
+  int later_years;
+  int human_years;
+  //The first two years of a dogs life is equal to 21 years old in human age.
+  early_years = 21;
+  //Calculation of Dog to human age in later years.
+  later_years = (dog_age - 2) * 4;
+  //Full Age of Dog age to human age.
+  human_years = early_years + later_years;
+  std::cout << "The Dog is " << human_years << " old in human age.\n";
+}
+
+//Currency Calculator 
+#include <iostream>
+
+int main() {
+  double pesos,reais,soles,dollars;
+  std::cout << "Enter number of Colombian Pesos: ";
+  std::cin >> pesos;
+  std::cout << "\n";
+  std::cout << "Enter number of Brazilian Reais: ";
+  std::cin >> reais;
+  std::cout << "\n";
+  std::cout << "Enter number of Peruvian Soles: ";
+  std::cin >> soles;
+  std::cout << "\n";
+
+  /* 1 Pesos is 0.059 United States Dolalrs
+     1 Reais is 0.200 United States Dollars
+     1 Soles is 0.270 United States Dollars */
+  //Pesos to United States Dollars.
+  dollars = (pesos * 0.059) + (reais * 0.2) + (soles * 0.27);
+  std::cout << "The total amount of US Dollars that you have is around = $" << dollars;
+}
