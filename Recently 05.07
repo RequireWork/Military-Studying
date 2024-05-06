@@ -1,0 +1,45 @@
+//Rock Paper and Scissors!
+#include <iostream>
+#include <stdlib.h>
+
+int main()
+{
+srand(time(NULL));
+int computer = rand()%3 + 1;
+int user = 0;
+
+std::cout << "\n==================\n";
+std::cout << "Rock Paper Scissors!\n";
+std::cout << "==================\n";
+
+std::cout << "1) Rock\n";
+std::cout << "2) Paper\n";
+std::cout << "3) Scissors\n";
+std::cin >> user;
+
+std::cout << computer;
+  if((computer == 1 && user == 3) || (computer == 2 && user == 1) || (computer == 3 && user == 2))
+  {
+    std::cout << "Computer Wins!";
+  }
+  else if((computer == 1 && user == 2) || (computer == 2 && user == 3) || (computer == 3 && user == 1))
+  {
+    std::cout << "Human Wins!";
+  }
+  else
+  {
+    std::cout << "No One Wins!";
+  }
+}
+  /*
+  Scissors cuts Paper.
+  Paper covers Rock.
+  Rock crushes Lizard.
+  Lizard poisons Spock.
+  Spock smashes Scissors.
+  Scissors decapitate Lizard.
+  Lizard eats Paper.
+  Paper disproves Spock.
+  Spock vaporizes Rock.
+  (and as it always has) Rock crushes Scissors.
+  */
