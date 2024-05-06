@@ -43,3 +43,30 @@ std::cout << computer;
   Spock vaporizes Rock.
   (and as it always has) Rock crushes Scissors.
   */
+//While loop to fizz Buzz
+#include <iostream>
+
+int main()
+{
+  int up = 1;
+  while(up <= 100)
+  {
+    if(up % 3 == 0 && up % 5 != 0)
+    {
+      std::cout << "Fizz\n";
+    }
+    else if(up % 5 == 0 && up % 3 != 0)
+    {
+      std::cout << "Buzz\n";
+    }
+    else if(up % 5 == 0 && up % 3 == 0)
+    {
+      std::cout << "FizzBuzz\n";
+    }
+    else
+    {
+      std::cout << up << "\n";
+    }
+    up++;
+  }
+}
