@@ -1,0 +1,148 @@
+//Here is a tictactoe code I was making using functions,loops and vectors
+1. First lets set up a vector from 0 to 8 where 012345678 is like
+0 1 2
+3 4 5
+6 7 8.
+This will basically make it so that the code will have conditions of winning and losing.
+2. Has 2 players, so we are gonna need two types of std::cins
+3. Make it so that if the player chooses a number already taken, we just stop them and tell them to choose again.
+4. Make it so that if all win conditions are not met, then we just stop the game and call it a tie.
+
+1) First, we get the player1s input. We then switch the number inside the tictactoe vector to 9 and also add this integer to the new player1s vector.
+
+2) Second, we get the player2s input. We then go through tictactoe and see if there is the number inside it and add the number to a new player2s vector. 
+If not, we will tell them to choose again if we do have the number, we erase and replace with a 9.
+
+3) Repeat till player 1 puts its third input. If all the inputs player 1 had up till now is
+addition of 1 towards each other
+addition of 3 towards each other
+or addition of 4 towards each other
+this is a bingo!
+Else we keep inputting till the tictactoe vector is no more.
+
+4) Same for player 2. 
+
+5) If the winners come out, we will give them a std::cout and congratulations.
+
+[1]
+1 - std::cin to get player1s input between 0 and 8. If another number is input, say Thats not a number choose again!
+2 - If the number player1 chooses is inside tictactoe vector then we change that number to integer 9
+3 - Add the chosen number to a new vector that represents players1s choice.
+------------------------------------------------------------------------------------------------
+1. We need a vector that can be both used in tic.cpp and ttt.cpp
+2. We need to make it so that the vectors do not get reset whenever we run ttt.cpp
+
+WHAT THE FUCK CODEACADEMY JUST ERASED ALL MY CODE GODDAMNIT THIS ARSE COMPUTER
+THATS IT I STOp
+
+#include <iostream>
+#include <vector>
+
+/*
+int menu()
+{
+  int choice1;
+  std::cout << "Welcome to Integer Tic Tac Toe! What would your choice be?\n" << "1) Play\n" << "2) Instructions";
+  std::cin >> choice1;
+  if(choice1 == 1)
+  {
+    std::cout << "Let us Start!";
+  }
+  else 
+  {
+    std::cout << "Here is the TicTacToe";
+
+  }
+}
+*/
+
+std::vector<int> tictactoe = {0,1,2,3,4,5,6,7,8};
+std::vector<int> player1s;
+std::vector<int> player2s;
+
+int choice(int player1c, int player2c)
+{
+  int p1c = player1c;
+  int p2c = player2c;
+  for(int i = 0; i < tictactoe.size();i++)
+  {
+    if(p1c == 9)
+    {
+      std::cout << "\nYou've just lost a turn!\n";
+    }
+    else if(p1c == tictactoe[i])
+    {
+      tictactoe[i] = 9;
+      player1s.push_back(p1c);
+    }
+  }
+  for(int s = 0; s < tictactoe.size();s++)
+  {
+    if(p2c == 9)
+    {
+      std::cout << "\nYou've just lost a turn!\n";
+    }
+    else if(p2c == tictactoe[i])
+    {
+      tictactoe[i] = 9;
+      player2s.push_back(p2c);
+    }
+  }
+}
+
+bool winnerdecide()
+{
+  for(int x = 0; x < player1s.size();x++)
+  {
+    if(player1s[x] + 2 == player1s[x] + 1 &&)
+  }
+}
+
+
+
+int choice(int player1c, int player2c);
+
+//Here is another try I did during the same day.
+
+void startgame()
+{
+  std::vector<int> grid = {0,1,2,3,4,5,6,7,8};
+  std::vector<int> p1;
+  std::vector<int> p2;
+
+  while(grid.size() > 0)
+  {
+    std::cout << "In Order, please give me the number you choose player 1 and 2!\n";
+    std::cin >> input1;
+    std::cin >> input2;
+    for(int i = 0; i < grid.size(); i++)
+    {
+      if(input1 == grid[i])
+      {
+        p1.push_back(input1);
+        grid.erase(i);
+      }
+    }
+    for(int s = 0; s < grid.size();s++)
+    {
+      if(input2 == grid[s])
+      {
+        p2.push_back(input2);
+        grid.erase(i);
+      }
+    }
+  }
+  check(std::vector<int> p1, std::vector<int> p2);
+}
+
+bool check(std::vector<int> p1, std::vector<int> p2)
+{
+  for(int i = 0; i < p1.size();i++)
+  {
+    if(p1[i] = p1[0] + 3)
+  }
+}
+
+
+I will Come Back In a Near Future when I have better understanding of C++.
+For now I retreat to Python.
